@@ -1,7 +1,11 @@
 /**
- *
+ * file:Driver.java
  * @author Rashad
+ * class: CS 2400-04
  * 
+ * assignment: program 2
+ * date last modified: 10/7/2019
+ * purpose:
  * this code strikes pain to my very core...
  */
 import java.util.*;

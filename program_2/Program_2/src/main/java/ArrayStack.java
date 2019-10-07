@@ -1,6 +1,11 @@
 /**
- *
+ * file:ArrayStack.java
  * @author Rashad
+ * class: CS 2400-04
+ * 
+ * assignment: program 2
+ * date last modified: 10/7/2019
+ * purpose:
  */
 import java.util.ArrayList;
 
