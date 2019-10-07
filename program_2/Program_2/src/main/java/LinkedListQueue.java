@@ -6,7 +6,7 @@ import java.util.*;
 
 public class LinkedListQueue<T> implements QueueInterface<T> {
     class Node {
-		public int data;
+		public T data;
 		public Node next;
     }
 
