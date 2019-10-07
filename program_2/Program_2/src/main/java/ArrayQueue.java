@@ -9,38 +9,40 @@ public class ArrayQueue<T> implements QueueInterface<T> {
     public ArrayQueue(){
 	list = new ArrayList<T>();
     }
-
-	@Override
-    public T peek() {
-	return list.get(list.size()-1);
-    }
-	
-	@Override
-    public boolean isEmpty() {
-	return list.isEmpty();
-    }
-
-	@Override
-    public T front() {
-	if(list.isEmpty()){
-            throw new IllegalStateException("Queue is empty");
-        }
-	return list.get(0);
-    }
-	
-	@Override
+    	@Override
+// adds to the list
     public void enqueue(T element) {
 	list.add(element);
     }
-	
 	@Override
+// removes next entity
     public T dequeue() {
 	if(list.size() <= 0){
             throw new IllegalStateException("Queue is empty");
         }
 	return list.remove(0);
     }
-	
+    	@Override
+//shows front of list
+    public T front() {
+	if(list.isEmpty()){
+            throw new IllegalStateException("Queue is empty");
+        }
+	return list.get(0);
+    }	
+	@Override
+//shows next entity
+    public T peek() {
+	return list.get(list.size()-1);
+    }
+	@Override
+//returns true if empty
+    public boolean isEmpty() {
+	return list.isEmpty();
+    }
+
+
+
 	
 }
 

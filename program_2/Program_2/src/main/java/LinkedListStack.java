@@ -11,15 +11,16 @@ public class LinkedListStack<T> implements StackInterface<T> {
 	public T data;
 	public Node next;
     }
-
+//holds data for the begining and end of list
     private Node first;
     private Node last;
+//keeps track of input numbers
     int numberOfEntries = 0;
     
     public LinkedListStack() {
         first = null;
     }
-
+//adds new entry
     public void push(T anEntry)	{
 	Node n = new Node();
 	n.data = anEntry;
@@ -31,6 +32,7 @@ public class LinkedListStack<T> implements StackInterface<T> {
             
     }
         @Override
+// removes one entry at the end and returns the value
     public T pop() {
         if (first == null) {
             throw new NoSuchElementException();
@@ -43,6 +45,7 @@ public class LinkedListStack<T> implements StackInterface<T> {
     }
     
         @Override
+//shows what is at the front of the list
     public T front() {
 	if (first == null) {	
             throw new NoSuchElementException();
@@ -53,6 +56,7 @@ public class LinkedListStack<T> implements StackInterface<T> {
 	}
     }
         @Override
+//shows next entity
     public T peek() {
 	if (first == null) {	
             throw new NoSuchElementException();
@@ -62,7 +66,7 @@ public class LinkedListStack<T> implements StackInterface<T> {
             return ret;
 	}
     }
-    
+// checks to see if empty
     public boolean isEmpty() {
         if (first==null)
             return true;

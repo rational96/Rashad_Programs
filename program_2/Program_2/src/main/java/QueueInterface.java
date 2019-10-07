@@ -1,6 +1,7 @@
 /**
  *
  * @author Rashad
+ * just an interface
  */
 public interface QueueInterface <T> {
    public void enqueue(T x);

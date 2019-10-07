@@ -15,9 +15,11 @@ public class LinkedListQueue<T> implements QueueInterface<T> {
 
     public LinkedListQueue() {
 	first = null;
+        last = null;
     }
 
     @Override
+//adds to queue
     public void enqueue(T anEntry) {
        	    Node n = new Node();
             n.data = anEntry;
@@ -25,12 +27,13 @@ public class LinkedListQueue<T> implements QueueInterface<T> {
             while (temp.next != null)
                 temp = temp.next;
             n.next = temp.next;
-            temp.next = n;
+            temp.next = n;            
             last.data = anEntry;
 	
     }
 
     @Override
+//removes fromm queue
     public T dequeue() {
 	if (first == null) {
             throw new NoSuchElementException();
@@ -43,11 +46,12 @@ public class LinkedListQueue<T> implements QueueInterface<T> {
     }
     
         @Override
+//shows front
     public T front() {
 	T ret = first.data;
         return ret;
     }
-    
+// shows next entity    
     public T peek() {
         if (first == null) {
             throw new NoSuchElementException();
@@ -56,7 +60,7 @@ public class LinkedListQueue<T> implements QueueInterface<T> {
             return last.data;
         }
     }
-        
+//returns true if empty        
     public boolean isEmpty() {
         if (first == null) {
             return true;

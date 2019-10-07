@@ -1,6 +1,7 @@
 /**
- *
+ * 
  * @author Rashad
+ * just an interface
  */
 public interface StackInterface<T> {
    public void push(T anEntry);
